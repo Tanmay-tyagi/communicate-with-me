@@ -115,9 +115,10 @@ canvas {
 <body>
 
 <!-- MUSIC -->
-<audio autoplay loop>
+<audio id="bg-music" loop>
   <source src="music.mp3" type="audio/mpeg">
 </audio>
+
 
 <!-- CONTENT -->
 <div class="card">
@@ -188,5 +189,16 @@ function update() {
 update();
 </script>
 
+<script>
+const music = document.getElementById("bg-music");
+
+document.addEventListener("click", () => {
+  music.volume = 0.4;
+  music.play();
+}, { once: true });
+</script>
+
+  
 </body>
 </html>
+
